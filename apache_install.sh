@@ -14,7 +14,7 @@ service httpd start
 ### SSL configuration ###
 
 mkdir -p /etc/httpd/ssl
-openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/httpd/ssl/apache.key -out /etc/httpd/ssl/apache.crt
+openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/httpd/ssl/apache.key -out /etc/httpd/ssl/apache.crt -subj "/C=GB/ST=London/L=London/O=Global Security/OU=IT Department/CN=example.com"
 
 ### Stop Iptables & check SELINUX###
 service iptables status
