@@ -16,9 +16,10 @@ service httpd start
 mkdir -p /etc/httpd/ssl
 openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/httpd/ssl/apache.key -out /etc/httpd/ssl/apache.crt
 
-### Stop Iptables ###
+### Stop Iptables & chek SELINUX###
 service iptables status
 service iptables stop
+sestatus
 
 ### Restart Apache ## 
 service httpd restart
