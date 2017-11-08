@@ -13,7 +13,7 @@ service httpd start
 
 ### SSL configuration ###
 
-mkdir /etc/httpd/ssl
+mkdir -p /etc/httpd/ssl
 openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/httpd/ssl/apache.key -out /etc/httpd/ssl/apache.crt
 
 ### Stop Iptables ###
