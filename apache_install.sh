@@ -29,4 +29,4 @@ echo "10.237.171.13     cname.example-pharma.com" >> /etc/hosts
 chkconfig httpd on
 service httpd start
 
-echo "Done!"
+echo "Done!!"
